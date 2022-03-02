@@ -2,6 +2,9 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Components/Login";
 import Header from "./Components/Header";
+import Home from "./Components/Home";
+import styled from "styled-components";
+import Details from "./Components/Details";
 
 function App() {
   return (
@@ -14,6 +17,25 @@ function App() {
               <>
                 <Header />
                 <Login />
+              </>
+            }
+          />
+          <Route
+            path="/home"
+            element={
+              <>
+                <Header />
+
+                <Home />
+              </>
+            }
+          />
+          <Route
+            path="/details"
+            element={
+              <>
+                <Header />
+                <Details />
               </>
             }
           />

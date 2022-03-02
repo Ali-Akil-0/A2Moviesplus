@@ -4,8 +4,15 @@ import styled from "styled-components";
 import BackgroundImage from "../images/login-background.jpg";
 import Logo1 from "../images/cta-logo-one.svg";
 import Logo2 from "../images/cta-logo-two.png";
+import { auth, provider } from "../firebase";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+
+import { UserFromToken } from "stream-chat";
 
 const Login = () => {
+  //   provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
+  //   auth.languageCode = "it";
+
   return (
     <Container>
       <Content>
