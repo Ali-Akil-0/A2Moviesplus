@@ -87,10 +87,13 @@ const Header = () => {
   console.log("The email");
   console.log(email);
   console.log(photo);
+  const ReturnHome = () => {
+    navigate("/home");
+  };
 
   return (
     <Container>
-      <Logo alt="logo" src={logo} />
+      <Logo onClick={ReturnHome} alt="logo" src={logo} />
       <HeaderMiddle>
         <HeaderItem>
           <HomeIcon />
@@ -153,6 +156,9 @@ const Container = styled.div`
 const Logo = styled.img`
   object-fit: contain;
   max-height: 50px;
+  &:hover {
+    cursor: pointer;
+  }
 `;
 const BContainer = styled.div`
   background-color: black;
